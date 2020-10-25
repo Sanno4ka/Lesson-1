@@ -37,7 +37,6 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    background-color: #fff;
     text-align: center;
     padding: 30px;
     width: 360px;
@@ -54,7 +53,17 @@
     margin-top: 10px;
     display: inline-block;
   }
+
+  .lock {
+    width: 51px;
+    height: 51px;
+    background-image: url('lock.png');
+  }
   
   .ageConfirmed{
     background-color: rgb(59, 27, 133);
+  }
+
+  .ageNotConfirmed {
+    background-color: red;
   }
