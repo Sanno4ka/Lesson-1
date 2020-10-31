@@ -1,69 +1,89 @@
 .centered {
-    position: fixed; /* or absolute */
-    top: 50%; 
-    left: 50%;
-    background: #f0f0f0;
-  }
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  background: #f0f0f0;
+}
 
-  H1 {
-    color: #000080;
-    font-size: 200%;
-    font-family: Arial, Verdana, sans-serif;
-    text-align: center;
-  }
-  P {
-    padding-left: 20px;
-  }
+H1 {
+  color: #000080;
+  font-size: 200%;
+  font-family: Arial, Verdana, sans-serif;
+  text-align: center;
+}
+P {
+  padding-left: 20px;
+}
 
-  #ageWrapper {
- 
-    opacity:1;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 9000;
-    background-color: rgba(32,23,19,.7);
-    transition: visibility 0s ease-in-out .5s, opacity .5s ease-in-out;
-  }
-  
-  #ageWrapper.ageUnknown {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  #agePopUp {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    padding: 30px;
-    width: 360px;
-    height: 250px;
-    margin-top: -105px;
-    margin-left: -185px;
-    box-sizing: border-box;
-  }
-  
-  #agePopUp a {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    display: inline-block;
-  }
+#ageWrapper {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  background-color: rgba(32, 23, 19, 0.7);
+  transition: visibility 0s ease-in-out 0.5s, opacity 0.5s ease-in-out;
+}
 
-  .lock {
-    width: 51px;
-    height: 51px;
-    background-image: url('lock.png');
-  }
-  
-  .ageConfirmed{
-    background-color: rgb(59, 27, 133);
-  }
+#ageWrapper.ageUnknown {
+  visibility: visible;
+  opacity: 1;
+}
 
-  .ageNotConfirmed {
-    background-color: red;
-  }
+#agePopUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  padding: 30px;
+  width: 360px;
+  height: 250px;
+  margin-top: -105px;
+  margin-left: -185px;
+  box-sizing: border-box;
+}
+
+#agePopUp a {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.lock {
+  width: 51px;
+  height: 51px;
+  background-image: url("lock.png");
+}
+
+.ageConfirmed {
+  background-color: rgb(59, 27, 133);
+}
+
+.ageNotConfirmed {
+  background-color: red;
+}
+
+/* styles rely on the custom attribute "order-state" */
+.order[data-order-state="new"] {
+  color: green;
+}
+
+.order[data-order-state="pending"] {
+  color: blue;
+}
+
+.order[data-order-state="canceled"] {
+  color: red;
+}
+
+.alert {
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+}
